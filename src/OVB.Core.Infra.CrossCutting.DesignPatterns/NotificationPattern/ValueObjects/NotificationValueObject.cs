@@ -10,7 +10,7 @@ public readonly struct NotificationValueObject
     private string Message { get; }
     private TypeNotification TypeNotification { get; }
     
-    private NotificationValueObject(ref string code, ref string message, ref TypeNotification typeNotification)
+    private NotificationValueObject(string code, string message,  TypeNotification typeNotification)
     {
         IsValid = true;
         Code = code;
@@ -21,7 +21,7 @@ public readonly struct NotificationValueObject
     public NotificationContent GetNotification()
         => new NotificationContent(Code, Message, TypeNotification);
 
-    public static NotificationValueObject Build(ref string code, ref string message, ref TypeNotification typeNotification)
+    public static NotificationValueObject Build(string code,  string message,  TypeNotification typeNotification)
     {
         NotificationPatternException.ThrowExceptionIfAnyStringIsEmpty(code, message);
 
@@ -29,8 +29,18 @@ public readonly struct NotificationValueObject
 
         NotificationPatternException.ThrowExceptionIfAnyStringHasGreaterThan255Characteres(code, message);
 
-        return new NotificationValueObject(ref code, ref message, ref typeNotification);
+        return new NotificationValueObject( code,  message,  typeNotification);
     }
+
+    public static NotificationValueObject BuildSuccessNotification(string code, string message)
+        => Build(code, message, TypeNotification.Success);
+
+    public static NotificationValueObject BuildErrorNotification(string code, string message)
+        => Build(code, message, TypeNotification.Error);
+
+    public static NotificationValueObject BuildInformationNotification(string code, string message)
+        => Build(code, message, TypeNotification.Information);
+
 
     public readonly struct NotificationContent
     {
