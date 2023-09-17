@@ -1,0 +1,1 @@
+# OVB.Core.Infra.CrossCutting.DesignPatterns
