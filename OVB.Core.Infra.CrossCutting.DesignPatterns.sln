@@ -3,9 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OVB.Core.Infra.CrossCutting.DesignPatterns", "src\OVB.Core.Infra.CrossCutting.DesignPatterns\OVB.Core.Infra.CrossCutting.DesignPatterns.csproj", "{D762C501-B77B-4F22-8265-E0DC0DEE6737}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OVB.Core.Infra.CrossCutting.DesignPatterns", "src\OVB.Core.Infra.CrossCutting.DesignPatterns\OVB.Core.Infra.CrossCutting.DesignPatterns.csproj", "{D762C501-B77B-4F22-8265-E0DC0DEE6737}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OVB.Core.Infra.CrossCutting.DesignPatterns.UnitTests", "tst\OVB.Core.Infra.CrossCutting.DesignPatterns.UnitTests\OVB.Core.Infra.CrossCutting.DesignPatterns.UnitTests.csproj", "{BC874013-C622-4D0C-8CC1-2FC290C86F83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OVB.Core.Infra.CrossCutting.DesignPatterns.UnitTests", "tst\OVB.Core.Infra.CrossCutting.DesignPatterns.UnitTests\OVB.Core.Infra.CrossCutting.DesignPatterns.UnitTests.csproj", "{BC874013-C622-4D0C-8CC1-2FC290C86F83}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{E31BA5FB-243E-414B-A511-B82CCF16AC4D}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B0B6CAE6-E63F-489A-9A70-3315D75D2670}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tst", "tst", "{41A98662-A422-44C1-984F-1598C0F9EDBB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "license", "license", "{E9F81AF1-D2EC-4C0E-A096-6AF7B409D097}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +38,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D762C501-B77B-4F22-8265-E0DC0DEE6737} = {B0B6CAE6-E63F-489A-9A70-3315D75D2670}
+		{BC874013-C622-4D0C-8CC1-2FC290C86F83} = {41A98662-A422-44C1-984F-1598C0F9EDBB}
 	EndGlobalSection
 EndGlobal
